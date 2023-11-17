@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Unidades</title>
+  <link rel="stylesheet" href="style.css"> <!--Add o CSS dentro do HTML-->
+  <script src="script.js" defer></script> <!--O atributo defer diz ao navegador para executar o script apenas quando a análise do HTML estiver finalizada-->
+</head>
+  <body>
+    <div class='container'> <!--Aqui será abrigado os elementos principais do conversor-->
+      <h1>Conversor de Unidades</h1>
+      <div class="input-group">
+        <label for="input">Digite a quantidade</label> <!--Label para definir o INPUT-->
+        <input type="number" id="input" name="input" placeholder="0" /> <!--função INPUT já pronta para alocar dados-->
+      </div>
+      <div class="input-group">
+        <label for="from">De:</label> <!--Essa é a label normal defniida para sua função-->
+        <select name="from" id="from"> <!--aqui dentro desse select a gente coloca as opções que vai ter dentro dele, igual está abaixo.-->
+            <option value="m">Metro(s)</option> <!--Abrimos a TAG OPTION para colocar as opções do SELECT-->
+            <option value="km">Quilometros(s)</option>
+            <option value="cm">Centimetros(s)</option>
+            <option value="mm">Milimetros(s)</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="to">Para:</label> <!--Aqui copiamos a parte de cima, oque mudou foi o FROM para TO que seria DE, PARA.-->
+        <select name="to" id="to">
+            <option value="m">Metro(s)</option>
+            <option value="km">Quilometros(s)</option>
+            <option value="cm">Centimetros(s)</option>
+            <option value="mm">Milimetros(s)</option>
+        </select>
+      </div>
+      <button id="convert-btn">Converter</button>
+      <div class="output-group">
+        <label for="output">Resultado:</label>
+        <input type="text" id="output" readonly />
+      </div>
+      <div id="message"></div>
+    </div>
+  </body>
+</html>
